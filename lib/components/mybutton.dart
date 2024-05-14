@@ -4,7 +4,11 @@ class MyButton extends StatelessWidget {
   final String text;
   final String rout;
 
-  const MyButton({super.key, required this.text, required this.rout});
+  const MyButton({
+    super.key,
+    required this.text,
+    required this.rout,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +25,11 @@ class MyButton extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10))),
           onPressed: () {
             Navigator.pushNamed(context, '/$rout');
+            //else {
+            //   ScaffoldMessenger.of(context).showSnackBar(
+            //     const SnackBar(content: Text('Processing Data')),
+            //   );
+            // }
           },
           child: Text(text),
         ),
